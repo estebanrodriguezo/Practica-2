@@ -34,9 +34,13 @@ int main()
     cout<<"Ingrese el dinero: "<<endl;
     cin>>n;
     while(i<10){
+        // este while controla que no se salga del arreglo
         while(n>=(*(*(dinero+i))+0)){
+            //la funcion de este while es buscar entre las monedas y los billetes cual es posible dividir con el moto ingresado
             *(*(dinero+i)+1)= n /(*(*(dinero+i))+0);
+            //aqui se modifica el valor del segundo objeto o posicion del arreglo interno
             n=n-((*(*(dinero+i))+0)*(*(*(dinero+i)+1)));
+            // se modifica el valor de n para poder seguir dividiendo entre los otros valores del dinero
             cout<<"el numero de monedas o blilletes de: "<<(*(*(dinero+i))+0)<< " es de: "<<*(*(dinero+i)+1)<<endl;
         }
         i++;
