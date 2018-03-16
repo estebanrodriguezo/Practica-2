@@ -13,6 +13,12 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello World!" << endl;
-    return 0;
+    int x,y;
+    cout<<"ingrese un numero: "<<endl;
+    cin>>x;
+    cout<<endl;
+    cout<<"ingrese en cuantas partes quiere dividir el numero : "<<endl;
+    cin>>y;
+    cout<<endl;
+
 }

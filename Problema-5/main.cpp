@@ -15,6 +15,7 @@ int main()
     int x,nDigitos=1,z;
     cout << "Ingrese un numero: " << endl;
     cin>>x;
+    if(x<1){x=x*(-1);}
     cout<<endl<<endl;
     z=x;
     while(z>=10){//este while tiene como funcion hallar el numeros de digitos del numero ingresado
