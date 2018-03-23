@@ -11,14 +11,52 @@ Suma: 994.
 
 using namespace std;
 
+int x,numDiv,i;
+int NumCeros(int cifrasNumero, int numDiv);
+int returnStr2();
 int main()
 {
-    int x,y;
-    cout<<"ingrese un numero: "<<endl;
-    cin>>x;
-    cout<<endl;
-    cout<<"ingrese en cuantas partes quiere dividir el numero : "<<endl;
-    cin>>y;
-    cout<<endl;
+    int y;
+    int n=0;
+    char * str2; // guardara el string con tantos ceros a la izquierda como se necesite
+
+    char * str; // guarda el string original
+
+    //reserva de espacio para los strings
+    str=new char[20];
+    str2=new char[20];
+
+
+    //Se pide al usuario la cadena de caracteres numericos original a trabajar
+    std::cout << "Ingrese una cadena de caracteres numericos" <<std::endl;
+    std::cin.getline(str,20);
+    std::cout<<std::endl;
+    y= std :: cin.gcount()-1; //tamaño de la cadena
+    //std::cout<<str_size(str)<<std::endl; //esto era para el debug
+
+    //Se pide al usuario el numero entre el que sea va a subdividir la cadena
+    std::cout << "Ingrese el numero entre el que se desea subdividir la cadena" <<std::endl;
+    std::cin>>n;
+    std::cout<<std::endl;
 
 }
+
+int NumCeros(int cifrasNumero, int numDiv){
+    int v=0;
+    while(((cifrasNumero+v) % numDiv)!=0){
+        v++;
+        }
+        return v;
+    }
+
+int returnStr2(){
+
+
+}
+
+
+
+
+
+
+

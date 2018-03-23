@@ -36,7 +36,7 @@ int main()
     while(i<10){
         // este while controla que no se salga del arreglo
         while(n>=(*(*(dinero+i))+0)){
-            //la funcion de este while es buscar entre las monedas y los billetes cual es posible dividir con el moto ingresado
+            //la funcion de este while es buscar entre las monedas y los billetes cual es posible dividir con el monto ingresado
             *(*(dinero+i)+1)= n /(*(*(dinero+i))+0);
             //aqui se modifica el valor del segundo objeto o posicion del arreglo interno
             n=n-((*(*(dinero+i))+0)*(*(*(dinero+i)+1)));

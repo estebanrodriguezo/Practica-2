@@ -15,7 +15,6 @@ int main()
     int x,nDigitos=1,z;
     cout << "Ingrese un numero: " << endl;
     cin>>x;
-    if(x<1){x=x*(-1);}
     cout<<endl<<endl;
     z=x;
     while(z>=10){//este while tiene como funcion hallar el numeros de digitos del numero ingresado
@@ -25,7 +24,7 @@ int main()
     if(nDigitos==1){
         char numer [] ={ 48,49,50,51,52,53,54,55,56,57 };
         int i=0;
-        while(i<10){
+        while(i<10){ // este ciclo tiene como fin ir imprimiendo numero por numero en forma de caracter (char) utilizando la tabla ascii
             if (x==i){
                 cout<<numer[i]<<endl;
             }
@@ -42,7 +41,7 @@ static int printdig(int numero,int nDigitos){
     char numer [] ={ 48,49,50,51,52,53,54,55,56,57 };
     int digitoActual=0,i=0;
 
-    for(int j=nDigitos;j>=1;j--){//lo que hace este for es sacar digito por digito mientras a suvez llama la funcion potencia para potenciarlo por el mismo
+    for(int j=nDigitos;j>=1;j--){//lo que hace este for es sacar digito por digito
 
     digitoActual=numero/(potencia(10,j-1));//se saca el primer digito haciendo una division entera por 10^numero de digitos menos uno
 
@@ -56,11 +55,11 @@ static int printdig(int numero,int nDigitos){
     }
 
     }
-
+    return numero;
 }
 
 
-static int potencia(int base, int exp){
+static int potencia(int base, int exp){ // funcion potencia
  int ayuda=base;
     if(exp>1){
         for(int i=1;i<exp;i++){
